@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-startbootstrap-agency",
-  "description": "gatsby version of startbootstrap-agency with i18n support",
+  "name": "marcodrywall-website",
+  "description": "Website for marcodrywall.com",
   "version": "0.1.0",
-  "author": "thundermiracle",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
