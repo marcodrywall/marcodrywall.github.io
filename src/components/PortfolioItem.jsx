@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Col } from "react-bootstrap";
-import Image from "components/Image";
-import Icon from "components/Icon";
-import PortfolioDetailDialog from "components/PortfolioDetailDialog";
+import { Col } from 'react-bootstrap'
+import Image from 'components/Image'
+import Icon from 'components/Icon'
+import PortfolioDetailDialog from 'components/PortfolioDetailDialog'
 
-import "./PortfolioItem.scss";
+import './PortfolioItem.scss'
 
 const PortfolioItem = ({
   imageFileName,
@@ -18,13 +18,13 @@ const PortfolioItem = ({
   imageAltDetail,
   extraInfo,
 }) => {
-  const [showDetail, setShowDetail] = React.useState(false);
+  const [showDetail, setShowDetail] = React.useState(false)
   const handleShowDetail = React.useCallback(() => {
-    setShowDetail(true);
-  }, []);
+    setShowDetail(true)
+  }, [])
   const handleHideDetail = React.useCallback(() => {
-    setShowDetail(false);
-  }, []);
+    setShowDetail(false)
+  }, [])
 
   return (
     <>
@@ -63,8 +63,8 @@ const PortfolioItem = ({
         extraInfo={extraInfo}
       />
     </>
-  );
-};
+  )
+}
 
 PortfolioItem.propTypes = {
   imageFileName: PropTypes.string.isRequired,
@@ -75,15 +75,15 @@ PortfolioItem.propTypes = {
   imageFileNameDetail: PropTypes.string,
   imageAltDetail: PropTypes.string,
   extraInfo: PropTypes.any,
-};
+}
 
 PortfolioItem.defaultProps = {
-  imageAlt: "",
-  subheader: "",
-  content: "",
-  imageFileNameDetail: "",
-  imageAltDetail: "",
+  imageAlt: '',
+  subheader: '',
+  content: '',
+  imageFileNameDetail: '',
+  imageAltDetail: '',
   extraInfo: null,
-};
+}
 
-export default PortfolioItem;
+export default PortfolioItem

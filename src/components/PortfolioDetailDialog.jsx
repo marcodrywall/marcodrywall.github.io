@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { Modal, Button } from "react-bootstrap";
-import Image from "components/Image";
-import Icon from "./Icon";
+import { Modal, Button } from 'react-bootstrap'
+import Image from 'components/Image'
+import Icon from './Icon'
 
 const PortfolioDetailDialog = ({
   onHide,
@@ -45,8 +45,8 @@ const PortfolioDetailDialog = ({
         </div>
       </Modal.Footer>
     </Modal>
-  );
-};
+  )
+}
 
 PortfolioDetailDialog.propTypes = {
   onHide: PropTypes.func,
@@ -56,16 +56,16 @@ PortfolioDetailDialog.propTypes = {
   subheader: PropTypes.string,
   content: PropTypes.string,
   extraInfo: PropTypes.any,
-};
+}
 
 PortfolioDetailDialog.defaultProps = {
   onHide: null,
-  imageFileName: "",
+  imageFileName: '',
   imageAlt: null,
-  header: "",
-  subheader: "",
-  content: "",
+  header: '',
+  subheader: '',
+  content: '',
   extraInfo: null,
-};
+}
 
-export default PortfolioDetailDialog;
+export default PortfolioDetailDialog

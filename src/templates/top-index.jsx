@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 
-import Navbar from "views/Navbar";
-import Top from "views/Top";
-import Footer from "views/Footer";
-import * as Sections from "views/Sections";
-import SEO from "components/SEO";
-import LanguageSelector from "components/LanguageSelector";
+import Navbar from 'views/Navbar'
+import Top from 'views/Top'
+import Footer from 'views/Footer'
+import * as Sections from 'views/Sections'
+import SEO from 'components/SEO'
+import LanguageSelector from 'components/LanguageSelector'
 
-import "utils/fixFontAwesome";
-import breakDownAllNodes from "utils/breakDownAllNodes";
-import fileNameToSectionName from "utils/fileNameToSectionName";
+import 'utils/fixFontAwesome'
+import breakDownAllNodes from 'utils/breakDownAllNodes'
+import fileNameToSectionName from 'utils/fileNameToSectionName'
 
-import "../style/main.scss";
+import '../style/main.scss'
 
 /**
  * get file name list from content/sections folder
@@ -101,28 +101,41 @@ export const query = graphql`
       }
     }
   }
-`;
+`
 
-const IndexPage = ({ data, pageContext: { langKey, defaultLang, langTextMap } }) => {
+const IndexPage = ({
+  data,
+  pageContext: { langKey, defaultLang, langTextMap },
+}) => {
   const {
     site: {
       siteMetadata: { keywords, description },
     },
     allMarkdownRemark: { nodes },
-  } = data;
+  } = data
 
-  const { topNode, navBarNode, anchors, footerNode, sectionsNodes } = breakDownAllNodes(nodes);
+  const { topNode, navBarNode, anchors, footerNode, sectionsNodes } =
+    breakDownAllNodes(nodes)
 
-  let langSelectorPart;
+  let langSelectorPart
   if (langTextMap != null && Object.keys(langTextMap).length > 1) {
     langSelectorPart = (
-      <LanguageSelector langKey={langKey} defaultLang={defaultLang} langTextMap={langTextMap} />
-    );
+      <LanguageSelector
+        langKey={langKey}
+        defaultLang={defaultLang}
+        langTextMap={langTextMap}
+      />
+    )
   }
 
   return (
     <>
-      <SEO lang={langKey} title="Top" keywords={keywords} description={description} />
+      <SEO
+        lang={langKey}
+        title="Top"
+        keywords={keywords}
+        description={description}
+      />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}
@@ -132,34 +145,34 @@ const IndexPage = ({ data, pageContext: { langKey, defaultLang, langTextMap } })
       {
         // dynamically import sections
         sectionsNodes.map(({ frontmatter, fields: { fileName } }, ind) => {
-          const sectionComponentName = fileNameToSectionName(fileName);
-          const SectionComponent = Sections[sectionComponentName];
+          const sectionComponentName = fileNameToSectionName(fileName)
+          const SectionComponent = Sections[sectionComponentName]
 
           return SectionComponent ? (
             <SectionComponent
               key={sectionComponentName}
-              className={ind % 2 === 1 ? "bg-light" : null}
+              className={ind % 2 === 1 ? 'bg-light' : null}
               frontmatter={frontmatter}
             />
-          ) : null;
+          ) : null
         })
       }
       <Footer frontmatter={footerNode.frontmatter} />
     </>
-  );
-};
+  )
+}
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object,
-};
+}
 
 IndexPage.defaultProps = {
   pageContext: {
-    langKey: "en",
-    defaultLang: "en",
+    langKey: 'en',
+    defaultLang: 'en',
     langTextMap: {},
   },
-};
+}
 
-export default IndexPage;
+export default IndexPage

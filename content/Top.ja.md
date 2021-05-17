@@ -1,6 +1,6 @@
 ---
-header: "It's Nice To Meet You"
-subheader: "Welcome To Our Studio!"
+header: "The best drywall services in the Bay Area"
+subheader: "Welcome To Marco Drywall"
 imageFileName: "header-bg.jpg"
 jumpToAnchor: "サービス"
 jumpToAnchorText: "詳しくへ"

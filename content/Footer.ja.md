@@ -1,5 +1,5 @@
 ---
-copyright: "Copyright © Start Bootstrap 2020"
+copyright: "Copyright © MarcoDrywall.com 2021"
 social: {
   twitter: "#",
   facebook: "#",

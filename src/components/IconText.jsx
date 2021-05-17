@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Icon from "components/Icon";
+import Icon from 'components/Icon'
 
-import "./IconText.scss";
+import './IconText.scss'
 
 const IconText = ({ iconName, text }) => {
   return (
@@ -11,12 +11,12 @@ const IconText = ({ iconName, text }) => {
       <Icon className="icon" iconName={iconName} />
       {text}
     </span>
-  );
-};
+  )
+}
 
 IconText.propTypes = {
   iconName: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-};
+}
 
-export default IconText;
+export default IconText

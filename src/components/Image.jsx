@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { StaticQuery, graphql } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticQuery, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const Image = ({ fileName, alt, ...restProps }) => (
   <StaticQuery
@@ -22,25 +22,27 @@ const Image = ({ fileName, alt, ...restProps }) => (
       }
     `}
     render={({ images }) => {
-      const image = images.edges.find((n) => n.node.relativePath.includes(fileName));
+      const image = images.edges.find((n) =>
+        n.node.relativePath.includes(fileName),
+      )
 
       if (!image) {
-        return null;
+        return null
       }
 
-      const imageData = image.node.childImageSharp.gatsbyImageData;
-      return <GatsbyImage alt={alt} image={imageData} {...restProps} />;
+      const imageData = image.node.childImageSharp.gatsbyImageData
+      return <GatsbyImage alt={alt} image={imageData} {...restProps} />
     }}
   />
-);
+)
 
 Image.propTypes = {
   fileName: PropTypes.string.isRequired,
   alt: PropTypes.string,
-};
+}
 
 Image.defaultProps = {
   alt: null,
-};
+}
 
-export default Image;
+export default Image
