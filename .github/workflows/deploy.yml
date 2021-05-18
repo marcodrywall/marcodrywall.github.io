@@ -35,5 +35,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           build_dir: public
+          fqdn: marcodrywall.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
