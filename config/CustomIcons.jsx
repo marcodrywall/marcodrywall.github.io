@@ -1,7 +1,7 @@
 import makeFAIcon from "utils/makeFAIcon";
 
-import { faShoppingCart, faLaptop, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faBrush, faBuilding, faScrewdriver } from "@fortawesome/free-solid-svg-icons";
 
-export const ShoppingCartIcon = makeFAIcon(faShoppingCart);
-export const LaptopIcon = makeFAIcon(faLaptop);
-export const LockIcon = makeFAIcon(faLock);
+export const brush = makeFAIcon(faBrush);
+export const building = makeFAIcon(faBuilding);
+export const screwdriver = makeFAIcon(faScrewdriver);

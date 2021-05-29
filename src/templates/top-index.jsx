@@ -117,29 +117,29 @@ const IndexPage = ({
   const { topNode, navBarNode, anchors, footerNode, sectionsNodes } =
     breakDownAllNodes(nodes)
 
-  let langSelectorPart
-  if (langTextMap != null && Object.keys(langTextMap).length > 1) {
-    langSelectorPart = (
-      <LanguageSelector
-        langKey={langKey}
-        defaultLang={defaultLang}
-        langTextMap={langTextMap}
-      />
-    )
-  }
+  // let langSelectorPart
+  // if (langTextMap != null && Object.keys(langTextMap).length > 1) {
+  //   langSelectorPart = (
+  //     <LanguageSelector
+  //       langKey={langKey}
+  //       defaultLang={defaultLang}
+  //       langTextMap={langTextMap}
+  //     />
+  //   )
+  // }
 
   return (
     <>
       <SEO
         lang={langKey}
-        title="Top"
+        title="Marco Drywall - Serving the San Francisco Bay Area"
         keywords={keywords}
         description={description}
       />
       <Navbar
         anchors={anchors}
         frontmatter={navBarNode.frontmatter}
-        extraItems={langSelectorPart}
+        // extraItems={langSelectorPart}
       />
       <Top frontmatter={topNode.frontmatter} />
       {
