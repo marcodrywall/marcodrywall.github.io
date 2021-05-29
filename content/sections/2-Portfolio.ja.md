@@ -2,7 +2,7 @@
 anchor: "ポートフォリオ"
 header: "ポートフォリオ"
 subheader: "あなたは偶然断然その持通り"
- portfolios: [
+portfolios: [
 #   {
 #     imageFileName: "portfolio/01-thumbnail.jpg",
 #     imageFileNameDetail: "portfolio/01-full.jpg",
