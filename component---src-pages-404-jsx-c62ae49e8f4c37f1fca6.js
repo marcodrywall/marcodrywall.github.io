@@ -1,0 +1,2 @@
+(self.webpackChunkmarcodrywall_website=self.webpackChunkmarcodrywall_website||[]).push([[256],{1657:function(e,t,l){"use strict";l.r(t);var n=l(7294);t.default=function(){return n.createElement(n.Fragment,null,n.createElement("h1",null,"NOT FOUND"),n.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---src-pages-404-jsx-c62ae49e8f4c37f1fca6.js.map
